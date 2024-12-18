@@ -1,0 +1,30 @@
+﻿@model EmployeeApp.Models.Employee
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Додати робітника</title>
+</head>
+<body>
+    <h1>Додати робітника</h1>
+    <form method="post">
+        <label>Ім'я:</label>
+        <input type="text" name="Name" value="@Model?.Name" />
+        @Html.ValidationMessageFor(m => m.Name)
+        <br />
+
+        <label>Посада:</label>
+        <input type="text" name="Position" value="@Model?.Position" />
+        @Html.ValidationMessageFor(m => m.Position)
+        <br />
+
+        <label>Зарплата:</label>
+        <input type="number" name="Salary" value="@Model?.Salary" />
+        @Html.ValidationMessageFor(m => m.Salary)
+        <br />
+
+        <button type="submit">Додати</button>
+    </form>
+    <a href="/Employee/Index">Назад до списку</a>
+</body>
+</html>

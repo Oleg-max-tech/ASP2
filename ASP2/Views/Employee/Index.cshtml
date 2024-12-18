@@ -1,0 +1,33 @@
+﻿@model List<EmployeeApp.Models.Employee>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Робітники</title>
+</head>
+<body>
+    <h1>Список робітників</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Ім'я</th>
+                <th>Посада</th>
+                <th>Зарплата</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <td>@employee.Id</td>
+                    <td>@employee.Name</td>
+                    <td>@employee.Position</td>
+                    <td>@employee.Salary</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Employee/AddEmployee">Додати робітника</a>
+</body>
+</html>
